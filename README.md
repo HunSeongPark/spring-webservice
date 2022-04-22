@@ -14,5 +14,5 @@
   - H2 Database                         
 
 ## 새롭게 알게 된 내용
-- `@Column(columnDefinition = "TEXT")` : 직접 Column 정의
-- `@Column(length = 500)` : 길이를 500으로 제한
+- `@Column(columnDefinition = "TEXT")` : 직접 Column 정의, 타입을 TEXT로 변환하여 기본값인 varchar(255)를 변환
+- `@Column(length = 500)` : 길이를 500으로 제한 , 기본값인 varchar(255)를 500으로 늘림
