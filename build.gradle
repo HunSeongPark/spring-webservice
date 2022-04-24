@@ -38,6 +38,12 @@ dependencies {
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("org.springframework.security:spring-security-test")
+
+    testImplementation("junit:junit:4.13.2")
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.8.2")
+    testImplementation('org.junit:junit-bom:5.8.2')
+
+
 }
 
 test {
