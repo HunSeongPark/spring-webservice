@@ -5,11 +5,13 @@ import com.hunseong.webservice.web.dto.PostsResponseDto;
 import com.hunseong.webservice.web.dto.PostsSaveRequestDto;
 import com.hunseong.webservice.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Hunseong on 2022/04/22
  */
+@Slf4j
 @RequiredArgsConstructor
 @RestController
 public class PostApiController {
@@ -23,6 +25,7 @@ public class PostApiController {
 
     @PutMapping("/api/v1/posts/{id}")
     public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto) {
+        log.info("update logic");
         return postsService.update(id, requestDto);
     }
 
